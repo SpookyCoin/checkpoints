@@ -1,4 +1,4 @@
-# Checkpoints
+# Checkpoints (129000K Blocks)
 ### How To Sync Quickly
 ##### You can sync a fresh chain from 0 much quicker by loading "checkpoints" with your daemon.
 
