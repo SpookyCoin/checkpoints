@@ -4,43 +4,43 @@
 
 ### Setup
 
-- Right click [this link](https://github.com/derogold/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download the latest checkpoints.csv.
-- Place checkpoints.csv in the same folder as your DeroGoldd daemon
-- You can get DeroGoldd from here if you don't have it already: https://github.com/derogold/derogold/releases/latest
-- Make sure you shut down any GUI wallets, or any other instances of DeroGoldd.
+- Right click [this link](https://github.com/SpookyCoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download the latest checkpoints.csv.
+- Place checkpoints.csv in the same folder as your SpookyCoind daemon
+- You can get SpookyCoind from here if you don't have it already: https://github.com/derogold/derogold/releases/latest
+- Make sure you shut down any GUI wallets, or any other instances of SpookyCoind.
 
 ### Usage
 
 #### Windows
 
-- First, open a command prompt in the same directory as DeroGoldd.
-- This can easily be done by moving to the DeroGoldd directory in Windows Explorer, then typing `cmd` in the search bar and hitting enter:
+- First, open a command prompt in the same directory as SpookyCoind.
+- This can easily be done by moving to the SpookyCoind directory in Windows Explorer, then typing `cmd` in the search bar and hitting enter:
 
 ![Opening cmd](https://i.imgur.com/QoNwYtB.png)
-- Finally, type `DeroGoldd.exe --load-checkpoints checkpoints.csv` in the command prompt.
+- Finally, type `SpookyCoind.exe --load-checkpoints checkpoints.csv` in the command prompt.
 
 #### Linux, Apple
 
-- First, open a command prompt in the same directory as DeroGoldd.
-- You can use the `cd` command to change to this directory. For example, `cd Downloads/DeroGold-v0.1.1`
-- Alternatively, your file manager may provide the ability to open a terminal in your current directory. Navigate to the folder with DeroGoldd in, and try right clicking, to see if you can open a terminal there:
+- First, open a command prompt in the same directory as SpookyCoind.
+- You can use the `cd` command to change to this directory. For example, `cd Downloads/SpookyCoin-v0.1.1`
+- Alternatively, your file manager may provide the ability to open a terminal in your current directory. Navigate to the folder with SpookyCoind in, and try right clicking, to see if you can open a terminal there:
 
 ![Opening terminal](https://i.imgur.com/Rd5TmQc.png)
 
-- Finally, type `./DeroGoldd --load-checkpoints checkpoints.csv` in the terminal.
+- Finally, type `./SpookyCoind --load-checkpoints checkpoints.csv` in the terminal.
 
 ### Expected Output
 
 If you did the steps correctly, you should see something like this output.
 
 ```
-2018-May-13 11:58:39.654478 INFO    Welcome to DeroGold v0.1.1 ()
-2018-May-13 11:58:39.654914 INFO    Module folder: DeroGoldd
+2018-May-13 11:58:39.654478 INFO    Welcome to SpookyCoin v0.1.1 ()
+2018-May-13 11:58:39.654914 INFO    Module folder: SpookyCoind
 2018-May-13 11:58:39.655249 INFO    Loading Checkpoints for faster initial sync...
 2018-May-13 11:58:40.854979 INFO    Loaded 1235695 checkpoints from checkpoints.csv
 ```
 
-- DeroGoldd will then start syncing from checkpoints.
+- SpookyCoind will then start syncing from checkpoints.
 - If you are using the CLI wallet, then you can just wait for it to finish syncing, and open your wallet.
 - If you are using a GUI wallet, let it finish syncing, close it down by typing `exit` in the window, then open your GUI wallet.
 
@@ -77,36 +77,36 @@ If you did the steps correctly, you should see something like this output.
 ```
 
 - If you see output like the above, it means the file isn't present in the directory you are in.
-- Make sure you have placed the checkpoints.csv file in the same directory as DeroGoldd.
+- Make sure you have placed the checkpoints.csv file in the same directory as SpookyCoind.
 
-#### DeroGoldd.exe is not recognized / No such file or directory
+#### SpookyCoind.exe is not recognized / No such file or directory
 
 ```
-C:\Users\gentoo>DeroGoldd.exe --load-checkpoints checkpoints.csv
-'DeroGoldd.exe' is not recognized as an internal or external command,
+C:\Users\gentoo>SpookyCoind.exe --load-checkpoints checkpoints.csv
+'SpookyCoind.exe' is not recognized as an internal or external command,
 operable program or batch file.
 ```
 
-`bash: ./DeroGoldd: No such file or directory`
+`bash: ./SpookyCoind: No such file or directory`
 
-- If you see output like one of the above, it means your terminal isn't in the same folder as the DeroGoldd program.
+- If you see output like one of the above, it means your terminal isn't in the same folder as the SpookyCoind program.
 - You can type `pwd` to see what folder you are currently in.
 - Try following the steps above to get into the right folder, then try again.
-- If you type `ls`, you should see the DeroGoldd program, if you are in the correct folder:
+- If you type `ls`, you should see the SpookyCoind program, if you are in the correct folder:
 
 ```
-[DeroGold-v0.1.1] ls
-cryptotest  DeroGoldd  DeroGold-service  Dockerfile  miner  morpheus.wallet  wallet-api  zedwallet  zedwallet-beta
+[SpookyCoin-v0.1.1] ls
+cryptotest  SpookyCoind  SpookyCoin-service  Dockerfile  miner  morpheus.wallet  wallet-api  zedwallet  zedwallet-beta
 ```
 
 #### IO error
 
 ```
-2018-May-13 11:58:40.857058 INFO    Opening DB in /home/dan/.DeroGold/DB
-2018-May-13 11:58:40.858174 ERROR   DB Error. DB can't be opened in /home/dan/.DeroGold/DB. Error: IO error: While lock file: /home/dan/.DeroGold/DB/LOCK: Resource temporarily unavailable
+2018-May-13 11:58:40.857058 INFO    Opening DB in /home/dan/.SpookyCoin/DB
+2018-May-13 11:58:40.858174 ERROR   DB Error. DB can't be opened in /home/dan/.SpookyCoin/DB. Error: IO error: While lock file: /home/dan/.SpookyCoin/DB/LOCK: Resource temporarily unavailable
 2018-May-13 11:58:40.873692 ERROR   Exception: IO error
 ```
 
 - If you see output like the above, something else has got the database open already.
-- Make sure you have closed down any other DeroGoldd's, GUI wallets, and walletd.
+- Make sure you have closed down any other SpookyCoind's, GUI wallets, and walletd.
 - Use a task manager to help you find any which might be running in the background, then try again.
